@@ -1,16 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Clean') {
+        stage('Preparing') {
             steps {
-                echo "Cleaning docker compose containers"
-                sh 'docker-compose down'
+                echo "Running tests"
             }
         }
-        stage('Docker compose in test mode') {
+        stage('Tests') {
             steps {
-                echo "building the docker compose and initialize the containers with running tests as entry point"
-                sh 'docker-compose up -d'
+
+                sh 'python manage.py test'
             }
         }
     }
