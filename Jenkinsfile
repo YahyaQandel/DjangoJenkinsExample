@@ -4,6 +4,7 @@ pipeline {
         stage('Preparing') {
             steps {
                 echo "installing python packages"
+                sh "python --version"
                 sh "pip install -r requirements.txt"
             }
         }
