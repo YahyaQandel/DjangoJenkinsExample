@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "installing python packages"
                 sh "python --version"
-                sh "sudo easy_install pip"
+                sh "easy_install pip"
             }
         }
         stage('Installing dependencies') {
