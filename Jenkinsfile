@@ -6,7 +6,7 @@ pipeline {
                 echo "installing python packages"
                 sh "python --version"
                 sh "sudo easy_install pip"
-                sh "PATH=${PATH}:/usr/local/bin"
+                sh "export PATH=$PATH:/usr/local/bin"
             }
         }
         stage('Installing dependencies') {
