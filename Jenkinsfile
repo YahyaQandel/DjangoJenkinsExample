@@ -9,11 +9,6 @@ pipeline {
 
             }
         }
-        stage('Installing dependencies') {
-            steps {
-             sh "export PATH=$PATH:/usr/local/bin && pip --version"
-            }
-        }
         stage('Tests') {
             steps {
                 sh '/usr/local/bin/pip install -r requirements.txt '
