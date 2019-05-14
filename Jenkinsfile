@@ -7,11 +7,11 @@ pipeline {
                 sh "python --version"
                 sh "sudo easy_install pip"
                 sh "export PATH=$PATH:/usr/local/bin"
+                sh "pip --version"
             }
         }
         stage('Installing dependencies') {
             steps {
-                sh "pip --version"
             }
         }
         stage('Tests') {
