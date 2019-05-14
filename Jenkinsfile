@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                sh sudo /usr/local/bin/pip install -r requirements.txt '
+                sh 'sudo /usr/local/bin/pip install -r requirements.txt '
                 sh 'python manage.py test'
             }
         }
