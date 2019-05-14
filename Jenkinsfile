@@ -10,10 +10,6 @@ pipeline {
                 sh "pip --version"
             }
         }
-        stage('Installing dependencies') {
-            steps {
-            }
-        }
         stage('Tests') {
             steps {
                 sh 'python manage.py test'
